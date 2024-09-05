@@ -1,0 +1,28 @@
+					Prediction of Land Cover From Dense Time Series Remote Sensing Images
+
+1.Project Description:
+
+Problem Statement:
+To study change/development in a particular land area which is important to analyze the growth and problems in particular area
+
+Dataset:
+Experimental data set is retrived from sentinel-2 hub which of location Hyderabad, Andhra Pradesh and time line 01-01-2017 to 01-01-2024 with 12 points of time per year .Total 84 images experimental data image resolution:  150 m image size: (512,512)
+we split the dataset from 01-01-2017  to 01-12-2022 as training dataset and from 01-01-2023 to 01-01-2023 as testing dataset
+
+Models:
+SARIMA:.SARIMA model parameters such as order (non-seasonal ARIMA order), seasonal order (seasonal order), and trend are defined.
+STL-AR:1.The STL class from statsmodels.tsa.seasonal is used to decompose the time series (ts) into trend, seasonal, and residual components using Seasonal-Trend decomposition with LOESS.
+DHR:This involves fitting an Ordinary Least Squares (OLS) regression model with harmonic terms (sinusoidal components) to capture seasonal patterns. Then, it generates forecast values for a specified forecast horizon using the fitted model and the generated harmonic terms.
+TCN:A Sequential model is created with a TCN layer and a Dense output layer.
+The model is compiled with the Adam optimizer and mean squared error loss function.
+
+2.Project Running:
+1.Import necessary libraries and dataset
+2.Data Preprocessing by calculating the EVI values
+3.Preparing train data and test data
+4.Building the respective models
+5.Training the model
+6.Making predictions and printing forecast values
+7.Plotting the data between actual vs forecast
+8.And calculating the metrics which includes PCC, RMSE, MAE, Accuracy
+9.Finally compile and run the respective models
